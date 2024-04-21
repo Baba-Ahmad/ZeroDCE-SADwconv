@@ -1,5 +1,4 @@
-
-🏆🍀# Zero-DCESADWconv
+# Zero-DCESADWconv
 
 This project enhances the original ZeroDCE model by integrating self-attention and depthwise convolution layers, improving its capability to correct exposure in low-light images while maintaining the integrity of spatial features and color consistency. This modification, referred to as ZeroDCE - SADwconv, aims to provide a more refined approach to image quality enhancement.
 
@@ -411,12 +410,7 @@ plot_result("color_constancy_loss")
 plot_result("exposure_loss")
 
 
-
-
-
-
-## Results Visualiaztion
-
+##Results Visualiaztion(Loss Measurement)
 
 def plot_results(images, titles, figure_size=(12, 12)):
     fig = plt.figure(figsize=figure_size)
@@ -438,6 +432,10 @@ def infer(original_image):
     return output_image
 
 
+
+## Results Visualiaztion
+
+
     for val_image_file in test_low_light_images:
     original_image = Image.open(val_image_file)
     enhanced_image = infer(original_image)
@@ -446,4 +444,3 @@ def infer(original_image):
         ["Original", "PIL Autocontrast", "Enhanced"],
         (20, 12),
     )
-
