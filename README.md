@@ -411,7 +411,12 @@ plot_result("color_constancy_loss")
 plot_result("exposure_loss")
 
 
-##Results Visualiaztion(Loss Measurement)
+
+
+
+
+## Results Visualiaztion
+
 
 def plot_results(images, titles, figure_size=(12, 12)):
     fig = plt.figure(figsize=figure_size)
@@ -431,10 +436,6 @@ def infer(original_image):
     output_image = tf.cast((output_image[0, :, :, :] * 255), dtype=np.uint8)
     output_image = Image.fromarray(output_image.numpy())
     return output_image
-
-
-
-## Results Visualiaztion
 
 
     for val_image_file in test_low_light_images:
